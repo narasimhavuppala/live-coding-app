@@ -92,21 +92,15 @@
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
-
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.oracle</groupId> -->
-<!-- 			<artifactId>ojdbc7</artifactId> -->
-<!-- 			<version>12.1.0</version> -->
-<!-- 		</dependency> -->
-
+		<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
+		</dependency>
 
 	</dependencies>
-	<repositories>
-		<repository>
-			<id>oraclemyown</id>
-			<url>https://mvnrepository.com</url>
-		</repository>
-	</repositories>
+
 
 	<build>
 		<plugins>
@@ -116,5 +110,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
