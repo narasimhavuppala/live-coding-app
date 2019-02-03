@@ -7,21 +7,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
+@EntityScan(basePackageClasses = { Jsr310JpaConverters.class })
 public class Student {
-	
+
 	@Id
 	@GeneratedValue
 	private int studentId;
-	
+
 	@NotNull
 	private String studentName;
 	
+	@JsonFormat(pattern = "MM-dd-yyyy")
 	private LocalDate dob;
-	
+
 	private String grade;
-	
-	
 
 	public String getGrade() {
 		return grade;
@@ -54,6 +59,5 @@ public class Student {
 	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
-	
 
 }

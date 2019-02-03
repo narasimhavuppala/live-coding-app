@@ -1,9 +1,12 @@
-package com.bns.livecodingapp.model;
+package com.bns.livecodingapp.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.bns.livecodingapp.model.Student;
+import com.bns.livecodingapp.repository.StudentRepository;
 
 @Service
 public class StudentService {
