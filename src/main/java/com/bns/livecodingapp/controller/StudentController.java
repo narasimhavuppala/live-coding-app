@@ -25,7 +25,7 @@ public class StudentController {
 	@Autowired
 	JmsTemplate jmsTemplate;
 
-	@PostMapping(value="v1",produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value="v1")
 	public Student SaveStudent(@RequestBody @Valid Student obj) {
 		System.out.println(obj.getGrade());
 		jmsTemplate.convertAndSend("bns","Hello BNS Guys...POST Messages");
